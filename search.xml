@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[需要了解的基础知识]]></title>
-    <url>%2F2018%2F02%2F08%2FJava%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%91%A0%2F</url>
+    <url>%2F2018%2F02%2F08%2F2018%2FJava%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB%2FJava%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%91%A0%2F</url>
     <content type="text"><![CDATA[Jre 和 Jdk 的区别?–JRE： （Java Runtime Environment），java 运行环境。包括Java虚拟机(JVM Java Virtual Machine)和 Java 程序所需的核心类库等，如果想要运行一个开发好的 Java 程序，计算机中只需要安装 JRE 即可。–JDK：（Java Development Kit Java） 开发工具包。JDK 是提供给 Java 开发人员使用的，其中包含了 java 的开发工具，也包括了 JRE。所以安装了 JDK，就不用在单独安装 JRE 了。其中的开发工具：编译工具(javac.exe) 打包工具(jar.exe) 等简单而言： 使用 JDK 开发完成的 Java 程序，交给 JRE 去运行。 1我的总结：必须熟练的记忆， 核心类库，开发工具！ Java 虚拟机 JVMJava Virtual Machine ，简称 JVM; 它是运行所有 Java 程序的抽象计算机,是 Java 语言的运行环境，它是 Java 最具吸引力的特性之一，JVM 读取并处理编译过的与平台无关的字节码(class)文件。Java 编译器针对 JVM 产生 class 文件，因此是独立于平台的。Java 解释器负责将 JVM 的代码在特定的平台上运行。Java 虚拟机是不跨平台的. Java 程序运行机制 .java文件—&gt;javac.exe编译—&gt;.class文件—&gt;java.exe运行—&gt;结果 编译: javac 文件名.文件后缀名运行: java 类名 1我的总结：Java 程序的组成：Java 源文件，字节码文件。 Java 成员变量和局部变量局部变量： 不是声明在类体括号里面的变量； 局部变量使用前必须初始化值; 局部变量没有默认初始化值; 局部变量的作用域是从定义开始到定义它的代码块结束; 成员变量: 在方法体外,类体内声明的变量，又称字段(Field)或全局变量；（其实 Java 中没有全 局变量，由于 Java是面向对象语言，所有变量都是类成员） 成员变量的作用域是整个类中; 1我的总结：注意成员变量和局部变量的区别 基本数据类型 在数据类型中，最常用也是最基础的数据类型，被称作基本数据类型。可以使用这些类型的值来代表一些简单的状态。 基本数据类型： 整数型： byte(字节型)，short(短整型)，int(整型)，long(长整型) 小数型： float(单精度浮点型)，double(双精度浮点型) 字符型： char(字符型) 布尔型：boolean(布尔型)]]></content>
       <categories>
         <category>Java</category>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <title><![CDATA[杂谈]]></title>
-    <url>%2F2018%2F02%2F08%2F%E6%9D%82%E8%B0%88%2F</url>
+    <url>%2F2018%2F02%2F08%2F2018%2F02-08%2F%E6%9D%82%E8%B0%88%2F</url>
     <content type="text"><![CDATA[网易云音乐的那些事—“我们浪费掉了太多的青春，那是一段如此自以为是、又如此狼狈不堪的青春岁月，有欢笑，也有泪水；有朝气，也有颓废；有甜蜜，也有荒唐；有自信，也有迷茫。我们敏感，我们偏执，我们顽固到底地故作坚强；我们轻易的伤害别人，也轻易的被别人所伤，我们追逐于颓废的快乐，陶醉于寂寞的美丽…”——叶京 from -Auld Lang Syne—结婚的时候，她是伴娘。进入礼堂的时候和我站在一起，看着我将迎娶的新娘，她悄悄对我说了一句话让我红了眼眶。“我们终于一起步入结婚殿堂。” from -Beautiful In White (Demo)—当你喜欢一个优秀的人时，你会觉得自己千疮百孔。 from -遇见—最好的时代总在过去 from -初恋情人]]></content>
       <tags>
         <tag>杂谈</tag>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <title><![CDATA[工具篇------FTPServer]]></title>
-    <url>%2F2018%2F02%2F08%2F%E5%B7%A5%E5%85%B7%E7%AF%87-FTPServer%2F</url>
+    <url>%2F2018%2F02%2F08%2F2018%2F%E4%BC%81%E4%B8%9A%E7%BA%A7%E9%A1%B9%E7%9B%AE%2F%E5%B7%A5%E5%85%B7%E7%AF%87-FTPServer%2F</url>
     <content type="text"><![CDATA[—轻量级FTP服务器简介轻量级FTP服务器软件,没有复杂的设置,没有复杂的操作,傻瓜都能搭建属于自己的FTP服务器! 下载 ftp server]]></content>
       <categories>
         <category>工具篇</category>
@@ -32,7 +32,7 @@
   </entry>
   <entry>
     <title><![CDATA[开启我的博客之旅]]></title>
-    <url>%2F2018%2F02%2F07%2Fhello-blog%2F</url>
+    <url>%2F2018%2F02%2F07%2F2018%2F%E5%BC%80%E7%AF%87%2Fhello-blog%2F</url>
     <content type="text"><![CDATA[Welcome to Coder LiXinHua’s Blog!This is my first blog.Thank for you coming,and thank for your support.They are the energy to encourage me to move forward.From now on, I will update my blog regularly.I will record my learning knowledge here. Truth优秀的人，不是不合群，而是他们合群的人里面没有你]]></content>
       <tags>
         <tag>blog</tag>
