@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[工具篇------FTPServer]]></title>
     <url>%2F2018%2F02%2F08%2F%E5%B7%A5%E5%85%B7%E7%AF%87-FTPServer%2F</url>
-    <content type="text"><![CDATA[—FTPServerauthor: codingLixh tags:tool简介轻量级FTP服务器软件,没有复杂的设置,没有复杂的操作,傻瓜都能搭建属于自己的FTP服务器! 下载 ftp server]]></content>
+    <content type="text"><![CDATA[—轻量级FTP服务器简介轻量级FTP服务器软件,没有复杂的设置,没有复杂的操作,傻瓜都能搭建属于自己的FTP服务器! 下载 ftp server]]></content>
+      <categories>
+        <category>工具篇</category>
+      </categories>
+      <tags>
+        <tag>tool</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[开启我的博客之旅]]></title>

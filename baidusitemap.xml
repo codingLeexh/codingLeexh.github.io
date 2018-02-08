@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://yoursite.com/2018/02/08/%E5%B7%A5%E5%85%B7%E7%AF%87-FTPServer/</loc>
-    <lastmod>2018-02-08T02:29:42.694Z</lastmod>
+    <lastmod>2018-02-08T02:33:02.685Z</lastmod>
     <data>
         <display>
         <title>工具篇------FTPServer</title>
         <pubTime>2018-02-08T02:16:00.000Z</pubTime>
         
+        <tag>tool</tag>
+         
          
            
+             
+              <breadCrumb title="工具篇" url="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/"/>
+          
         </display>
     </data>
     </url>
