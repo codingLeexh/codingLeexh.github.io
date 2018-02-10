@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="这几天看到类在继承时会用到this和super，这里就做一点总结 thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publi">
+<meta name="description" content="这几天看到类在继承时会用到this和super，这里就做一点总结  thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publ">
 <meta name="keywords" content="Java随手记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="this和super的用法总结">
 <meta property="og:url" content="http://yoursite.com/2018/02/10/2018/随手记/Java笔记/index.html">
 <meta property="og:site_name" content="codingLixh&#39;s blog">
-<meta property="og:description" content="这几天看到类在继承时会用到this和super，这里就做一点总结 thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publi">
+<meta property="og:description" content="这几天看到类在继承时会用到this和super，这里就做一点总结  thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publ">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-10T13:28:34.966Z">
+<meta property="og:updated_time" content="2018-02-10T13:30:39.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this和super的用法总结">
-<meta name="twitter:description" content="这几天看到类在继承时会用到this和super，这里就做一点总结 thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publi">
+<meta name="twitter:description" content="这几天看到类在继承时会用到this和super，这里就做一点总结  thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publ">
 
 
 
@@ -365,13 +365,13 @@
         <script src="/assets/js/APlayer.min.js"> </script><hr>
 <blockquote>
 <p>这几天看到类在继承时会用到this和super，这里就做一点总结</p>
+</blockquote>
 <h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>this是自身的一个对象，代表对象本身，可以理解为：<code>指向对象本身的一个指针。</code></p>
 <h4 id="this的三种用法："><a href="#this的三种用法：" class="headerlink" title="this的三种用法："></a>this的三种用法：</h4><ul>
 <li>[普通的直接引用] </li>
 <li>[形参与成员名字重名，用this来区分：]<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    private int age = 10;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">    System.out.println(&quot;初始化年龄：&quot;+age);</span><br><span class="line">&#125;</span><br><span class="line">    public int GetAge(int age)&#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">        return this.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public class test1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Person Harry = new Person();</span><br><span class="line">        System.out.println(&quot;Harry&apos;s age is &quot;+Harry.GetAge(12));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-</blockquote>
 <p>运行结果：</p>
 <p>初始化年龄：10</p>
 <p>Harry’s age is 12</p>
