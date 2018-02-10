@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="&amp;gt; 这几天看到类在继承时会用到this和super，这里就做一点总结thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    pub">
+<meta name="description" content="这几天看到类在继承时会用到this和super，这里就做一点总结 thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publi">
 <meta name="keywords" content="Java随手记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="this和super的用法总结">
 <meta property="og:url" content="http://yoursite.com/2018/02/10/2018/随手记/Java笔记/index.html">
 <meta property="og:site_name" content="codingLixh&#39;s blog">
-<meta property="og:description" content="&amp;gt; 这几天看到类在继承时会用到this和super，这里就做一点总结thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    pub">
+<meta property="og:description" content="这几天看到类在继承时会用到this和super，这里就做一点总结 thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-10T13:24:43.778Z">
+<meta property="og:updated_time" content="2018-02-10T13:28:34.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this和super的用法总结">
-<meta name="twitter:description" content="&amp;gt; 这几天看到类在继承时会用到this和super，这里就做一点总结thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    pub">
+<meta name="twitter:description" content="这几天看到类在继承时会用到this和super，这里就做一点总结 thisthis是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。 this的三种用法： [普通的直接引用]  [形参与成员名字重名，用this来区分：]1234567891011121314151617class Person &amp;#123;    private int age = 10;    publi">
 
 
 
@@ -362,12 +362,16 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><h2 id="gt-这几天看到类在继承时会用到this和super，这里就做一点总结"><a href="#gt-这几天看到类在继承时会用到this和super，这里就做一点总结" class="headerlink" title="&gt; 这几天看到类在继承时会用到this和super，这里就做一点总结"></a>&gt; 这几天看到类在继承时会用到this和super，这里就做一点总结</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>this是自身的一个对象，代表对象本身，可以理解为：<code>指向对象本身的一个指针。</code></p>
+        <script src="/assets/js/APlayer.min.js"> </script><hr>
+<blockquote>
+<p>这几天看到类在继承时会用到this和super，这里就做一点总结</p>
+<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>this是自身的一个对象，代表对象本身，可以理解为：<code>指向对象本身的一个指针。</code></p>
 <h4 id="this的三种用法："><a href="#this的三种用法：" class="headerlink" title="this的三种用法："></a>this的三种用法：</h4><ul>
 <li>[普通的直接引用] </li>
 <li>[形参与成员名字重名，用this来区分：]<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    private int age = 10;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">    System.out.println(&quot;初始化年龄：&quot;+age);</span><br><span class="line">&#125;</span><br><span class="line">    public int GetAge(int age)&#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">        return this.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public class test1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Person Harry = new Person();</span><br><span class="line">        System.out.println(&quot;Harry&apos;s age is &quot;+Harry.GetAge(12));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+</blockquote>
 <p>运行结果：</p>
 <p>初始化年龄：10</p>
 <p>Harry’s age is 12</p>
@@ -690,7 +694,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#gt-这几天看到类在继承时会用到this和super，这里就做一点总结"><span class="nav-number">1.</span> <span class="nav-text">&gt; 这几天看到类在继承时会用到this和super，这里就做一点总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#this"><span class="nav-number">1.1.</span> <span class="nav-text">this</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#this的三种用法："><span class="nav-number">1.1.1.</span> <span class="nav-text">this的三种用法：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#super"><span class="nav-number">1.2.</span> <span class="nav-text">super</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#super的三种用法："><span class="nav-number">1.2.1.</span> <span class="nav-text">super的三种用法：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#super和this的异同："><span class="nav-number">2.</span> <span class="nav-text">super和this的异同：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#end"><span class="nav-number">3.</span> <span class="nav-text">end</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#this"><span class="nav-number">1.</span> <span class="nav-text">this</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#this的三种用法："><span class="nav-number">1.1.</span> <span class="nav-text">this的三种用法：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#super"><span class="nav-number">2.</span> <span class="nav-text">super</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#super的三种用法："><span class="nav-number">2.1.</span> <span class="nav-text">super的三种用法：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#super和this的异同："><span class="nav-number"></span> <span class="nav-text">super和this的异同：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#end"><span class="nav-number"></span> <span class="nav-text">end</span></a></div>
             
 
           </div>
