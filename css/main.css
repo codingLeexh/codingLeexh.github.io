@@ -1993,7 +1993,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff30d2;
+  background: #0dff77;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2845,4 +2845,8 @@ embed {
 .post-body p a:hover {
   color: #0477ab;
   text-decoration: underline;
+}
+body {
+  background: url("/images/background.jpg");
+  background-attachment: fixed;
 }
