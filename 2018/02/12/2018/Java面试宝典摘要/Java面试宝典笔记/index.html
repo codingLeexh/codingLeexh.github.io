@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java面试宝典," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="吾爱有三，日，月，卿；日为朝，月为暮，卿为朝朝暮暮。  12018年，从心开始。  1.Java基础1.一个”.java”源文件中是否可以包括多个类（不是内部类）？有什么限制？ 答：可以有多个类，但只能有一个public的类，并且public的类名必须与文件名相一致。  123456789101112131415解析：public class test &amp;#123;		public class">
+<meta name="keywords" content="Java面试宝典">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面试宝典2017版---第一篇">
+<meta property="og:url" content="http://yoursite.com/2018/02/12/2018/Java面试宝典摘要/Java面试宝典笔记/index.html">
+<meta property="og:site_name" content="codingLixh&#39;s blog">
+<meta property="og:description" content="吾爱有三，日，月，卿；日为朝，月为暮，卿为朝朝暮暮。  12018年，从心开始。  1.Java基础1.一个”.java”源文件中是否可以包括多个类（不是内部类）？有什么限制？ 答：可以有多个类，但只能有一个public的类，并且public的类名必须与文件名相一致。  123456789101112131415解析：public class test &amp;#123;		public class">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-12T13:01:41.008Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java面试宝典2017版---第一篇">
+<meta name="twitter:description" content="吾爱有三，日，月，卿；日为朝，月为暮，卿为朝朝暮暮。  12018年，从心开始。  1.Java基础1.一个”.java”源文件中是否可以包括多个类（不是内部类）？有什么限制？ 答：可以有多个类，但只能有一个public的类，并且public的类名必须与文件名相一致。  123456789101112131415解析：public class test &amp;#123;		public class">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+<script type="text/javascript" src="/js/src/high.js"></script>
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/12/2018/Java面试宝典摘要/Java面试宝典笔记/"/>
+
+
+
+
+
+  <title>Java面试宝典2017版---第一篇 | codingLixh's blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?35f2856f4da33fb5839e0de8a7057525";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">codingLixh's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-high">
+          <a href="javascript:void(0)" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            high
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/12/2018/Java面试宝典摘要/Java面试宝典笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="codingLixh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/../images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codingLixh's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java面试宝典2017版---第一篇</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T20:59:48+08:00">
+                2018-02-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="\assets\js\APlayer.min.js"> </script><blockquote>
+<p>吾爱有三，日，月，卿；日为朝，月为暮，卿为朝朝暮暮。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2018年，从心开始。</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="1-Java基础"><a href="#1-Java基础" class="headerlink" title="1.Java基础"></a>1.Java基础</h3><h4 id="1-一个”-java”源文件中是否可以包括多个类（不是内部类）？有什么限制？"><a href="#1-一个”-java”源文件中是否可以包括多个类（不是内部类）？有什么限制？" class="headerlink" title="1.一个”.java”源文件中是否可以包括多个类（不是内部类）？有什么限制？"></a>1.一个”.java”源文件中是否可以包括多个类（不是内部类）？有什么限制？</h4><blockquote>
+<p>答：可以有多个类，但只能有一个public的类，并且public的类名必须与文件名相一致。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">解析：</span><br><span class="line">public class test &#123;</span><br><span class="line">	</span><br><span class="line">	public class testC&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class testA&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class testB&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这是一个正确的类文件。如果给类testA或者testB加上public则会报错，原因：一个.java源文件中只能有一个public的类（不是内部类）。</li>
+<li>内部类：testC为内部类。</li>
+</ul>
+<hr>
+<h4 id="2-Java有没有goto"><a href="#2-Java有没有goto" class="headerlink" title="2.Java有没有goto?"></a>2.Java有没有goto?</h4><blockquote>
+<p> 答：Java中的保留字，现在没有在Java中使用。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">解析：什么是goto？</span><br><span class="line">    goto 是汇编语言的程序控制结构的始祖：“若条件A，则跳到这里；否则跳到那里”。</span><br><span class="line">    goto是一条可以在许多计算机编程语言中找到的语句。它是英文单词go和to的组合。当执行这条语句的时候，它将控制流程无条件地转到另一条语句（也叫“跳转”）。</span><br><span class="line">    跳转语句需要指明标记，在不同语言中，标记可以是标识符或行号。在机器码级别，goto是一种分支的形式。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Java中并没有使用过goto，但是Java中的break或continue关键字都是goto的形式。</li>
+</ul>
+<hr>
+<h4 id="3-说说-amp-和-amp-amp-的区别"><a href="#3-说说-amp-和-amp-amp-的区别" class="headerlink" title="3.说说&amp;和&amp;&amp;的区别"></a>3.说说&amp;和&amp;&amp;的区别</h4><blockquote>
+<p> 答：首先了解&amp;和&amp;&amp;，它们都可以用作逻辑与的运算符，表示逻辑与（and），当运算符两边的表达式的结果都为true时，整个运算结果才为true，否则，只要有一方为false，则结果为false。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">解析：</span><br><span class="line">    &amp;&amp;：&amp;&amp;还具有短路的功能，即如果第一个表达式为false，则不再计算第二个表达式。</span><br><span class="line">        例如：</span><br><span class="line">            if(str != null &amp;&amp; !str.equals(“”))</span><br><span class="line">            当str为null时，后面的表达式不会执行，所以不会出现NullPointerException，如果将&amp;&amp;改为&amp;，则会抛出NullPointerException异常。</span><br><span class="line">            If(x==33 &amp; ++y&gt;0) y会增长，If(x==33 &amp;&amp; ++y&gt;0)不会增长</span><br><span class="line">    &amp;：&amp;还可以用作位运算符，当&amp;操作符两边的表达式不是boolean类型时，&amp;表示按位与操作，我们通常使用0x0f来与一个整数进行&amp;运算，来获取该整数的最低4个bit位。</span><br><span class="line">        例如：</span><br><span class="line">            0x31 &amp; 0x0f的结果为0x01。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>&amp;的位运算符原理：0x31 &amp; 0x0f=0x01怎么算的？在这里，0x表示十六进制数，进行运算先转换成二进制数，0x31对应的二进制数是0011 0001；0xOf对应的是0000 1111。&amp;是按位与运算符，若是上下每列全是1那这一列的结果就是1，否则为0；经过计算可得出0000 0001；转化成十六进制就是0x01。</li>
+</ul>
+<hr>
+<h4 id="4-在JAVA中如何跳出当前的多重嵌套循环？"><a href="#4-在JAVA中如何跳出当前的多重嵌套循环？" class="headerlink" title="4.在JAVA中如何跳出当前的多重嵌套循环？"></a>4.在JAVA中如何跳出当前的多重嵌套循环？</h4><blockquote>
+<p>答：在Java中，要想跳出多重循环，可以在外面的循环语句前定义一个标号，然后在里层循环体的代码中使用带有标号的break 语句，即可跳出外层循环。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">解析：</span><br><span class="line">    ①.ok:</span><br><span class="line">	for(int i=0;i&lt;10;i++)	&#123;</span><br><span class="line">		for(int j=0;j&lt;10;j++)		&#123;</span><br><span class="line">			System.out.println(“i=” + i + “,j=” + j);</span><br><span class="line">			if(j == 5) break ok;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; </span><br><span class="line">	②.条件控制：让外层的循环条件表达式的结果可以受到里层循环体代码的控制，例如在**二维数组**中查找到某个数字</span><br><span class="line">	//定义二维数组</span><br><span class="line">	int arr[][] = &#123;&#123;1,2,3&#125;,&#123;4,5,6,7&#125;,&#123;9&#125;&#125;;</span><br><span class="line">    boolean found = false;</span><br><span class="line">    for(int i=0;i&lt;arr.length &amp;&amp; !found;i++)	&#123;</span><br><span class="line">		for(int j=0;j&lt;arr[i].length;j++)&#123;</span><br><span class="line">			System.out.println(“i=” + i + “,j=” + j);</span><br><span class="line">			if(arr[i][j]  == 5) &#123;</span><br><span class="line">				found = true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>二维数组？二维数组本质上是以数组作为数组元素的数组，即“数组的数组”，类型说明符 数组名[常量表达式][常量表达式]。二维数组又称为矩阵，行列数相等的矩阵称变方阵。对称矩阵a[i][j] = a[j][i]，对角矩阵：n阶方阵主对角线外都是零元素。</li>
+</ul>
+<hr>
+<h4 id="5-switch语句能否作用在byte上，能否作用在long上，能否作用在String上"><a href="#5-switch语句能否作用在byte上，能否作用在long上，能否作用在String上" class="headerlink" title="5.switch语句能否作用在byte上，能否作用在long上，能否作用在String上?"></a>5.switch语句能否作用在byte上，能否作用在long上，能否作用在String上?</h4><blockquote>
+<p>答：在switch（expr1）中，expr1只能是一个整数表达式或者枚举常量（更大字体），整数表达式可以是int基本类型或Integer包装类型，由于，byte,short,char都可以隐含转换为int，所以，这些类型以及这些类型的包装类型也是可以的。显然，long和String类型都不符合switch的语法规定，并且不能被隐式转换成int类型，所以，它们不能作用于swtich语句中。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">解析：</span><br><span class="line">        byte a=1;</span><br><span class="line">		switch (a) &#123;</span><br><span class="line">		case 1:</span><br><span class="line">			System.out.println(&quot;switch语句能作用在byte上&quot;);</span><br><span class="line">			break;</span><br><span class="line"></span><br><span class="line">		default:</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>控制台输出“switch语句能作用在byte上”，而long和string转换int需要强制转换或者调用其它方法，例如long转int调用intVlaue()方法。</li>
+</ul>
+<hr>
+<h6 id="6-short-s1-1-s1-s1-1-有什么错-short-s1-1-s1-1-有什么错"><a href="#6-short-s1-1-s1-s1-1-有什么错-short-s1-1-s1-1-有什么错" class="headerlink" title="6.short s1 = 1; s1 = s1 + 1;有什么错? short s1 = 1; s1 += 1;有什么错?"></a>6.short s1 = 1; s1 = s1 + 1;有什么错? short s1 = 1; s1 += 1;有什么错?</h6><blockquote>
+<p>答：</p>
+<p>对于short s1 = 1; s1 = s1 + 1; 由于s1+1运算时会自动提升表达式的类型，所以结果是int型，再赋值给short类型s1时，编译器将报告需要强制转换类型的错误。</p>
+<p>对于short s1 = 1; s1 += 1;由于 += 是java语言规定的运算符，java编译器会对它进行特殊处理，因此可以正确编译。 </p>
+</blockquote>
+<ul>
+<li>盘点Java中+=；s1+=1相当于s1=s1+1，等式是先将1转换为s1一样的类型再进行s1+1。也就等价于s1=s1+(s1)1；</li>
+</ul>
+<hr>
+<h4 id="7-char型变量中能不能存贮一个中文汉字-为什么"><a href="#7-char型变量中能不能存贮一个中文汉字-为什么" class="headerlink" title="7.char型变量中能不能存贮一个中文汉字?为什么?"></a>7.char型变量中能不能存贮一个中文汉字?为什么?</h4><blockquote>
+<p>答：char型变量是用来存储Unicode编码的字符的，unicode编码字符集中包含了汉字，所以，char型变量中当然可以存储汉字啦。不过，如果某个特殊的汉字没有被包含在unicode编码字符集中，那么，这个char型变量中就不能存储这个特殊汉字。补充说明：unicode编码占用两个字节，所以，char类型的变量也是占用两个字节。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">String str= &quot;中&quot;;  </span><br><span class="line">        char x =&apos;中&apos;;  </span><br><span class="line">        byte[] bytes=null;  </span><br><span class="line">        byte[] bytes1=null;  </span><br><span class="line">        try &#123;  </span><br><span class="line">            bytes = str.getBytes(&quot;utf-8&quot;);  </span><br><span class="line">            bytes1 = charToByte(x);  </span><br><span class="line">        &#125; catch (UnsupportedEncodingException e) &#123;</span><br><span class="line">            e.printStackTrace();  </span><br><span class="line">        &#125;  </span><br><span class="line">        System.out.println(&quot;bytes 大小：&quot;+bytes.length);  </span><br><span class="line">        System.out.println(&quot;bytes1大小：&quot;+bytes1.length);  </span><br><span class="line">    &#125;  </span><br><span class="line">    public static byte[] charToByte(char c) &#123;   </span><br><span class="line">        byte[] b = new byte[2];   </span><br><span class="line">        b[0] = (byte) ((c &amp; 0xFF00) &gt;&gt; 8);   </span><br><span class="line">        b[1] = (byte) (c &amp; 0xFF);   </span><br><span class="line">        return b;   </span><br><span class="line">    &#125;  </span><br><span class="line">    </span><br><span class="line">    //运行结果：</span><br><span class="line">    //bytes 大小：3</span><br><span class="line">    //bytes1大小：2</span><br></pre></td></tr></table></figure>
+<ul>
+<li>unicode为2个字节（16位）来表示一个字符 </li>
+</ul>
+<hr>
+<h4 id="8-用最有效率的方法算出2乘以8等於几"><a href="#8-用最有效率的方法算出2乘以8等於几" class="headerlink" title="8.用最有效率的方法算出2乘以8等於几?"></a>8.用最有效率的方法算出2乘以8等於几?</h4><blockquote>
+<p>答：2 &lt;&lt; 3</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解析：</span><br><span class="line">    因为将一个数左移n位，就相当于乘以了2的n次方，那么，一个数乘以8只要将其左移3位即可，而位运算cpu直接支持的，效率最高，所以，2乘以8等於几的最效率的方法是2 &lt;&lt; 3。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>2&lt;&lt;3，直接读作2左移3位，而不是2小于小于3。 </li>
+</ul>
+<hr>
+<h4 id="9-请设计一个一百亿的计算器"><a href="#9-请设计一个一百亿的计算器" class="headerlink" title="9.请设计一个一百亿的计算器"></a>9.请设计一个一百亿的计算器</h4><p><code>首先要明白这道题目的考查点是什么，一是大家首先要对计算机原理的底层细节要清楚、要知道加减法的位运算原理和知道计算机中的算术运算会发生越界的情况，二是要具备一定的面向对象的设计思想。</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">首先，计算机中用固定数量的几个字节来存储的数值，所以计算机中能够表示的数值是有一定的范围的，为了便于讲解和理解，我们先以byte 类型的整数为例，它用1个字节进行存储，表示的最大数值范围为-128到+127。</span><br><span class="line">    -1在内存中对应的二进制数据为11111111，如果两个-1相加，不考虑Java运算时的类型提升，运算后会产生进位，二进制结果为1,11111110，由于进位后超过了byte类型的存储空间，所以进位部分被舍弃，即最终的结果为11111110，也就是-2，这正好利用溢位的方式实现了负数的运算。</span><br><span class="line">    -128在内存中对应的二进制数据为10000000，如果两个-128相加，不考虑Java运算时的类型提升，运算后会产生进位，二进制结果为1,00000000，由于进位后超过了byte类型的存储空间，所以进位部分被舍弃，即最终的结果为00000000，也就是0，这样的结果显然不是我们期望的，这说明计算机中的算术运算是会发生越界情况的，两个数值的运算结果不能超过计算机中的该类型的数值范围。</span><br><span class="line">    由于Java中涉及表达式运算时的类型自动提升，我们无法用byte类型来做演示这种问题和现象的实验，大家可以用下面一个使用整数做实验的例子程序体验一下：</span><br><span class="line"></span><br><span class="line">    int a = Integer.MAX_VALUE;</span><br><span class="line">		int b = Integer.MAX_VALUE;</span><br><span class="line">		int sum = a + b;</span><br><span class="line">		System.out.println(“a=”+a+”,b=”+b+”,sum=”+sum);</span><br><span class="line">先不考虑long类型，由于int的正数范围为2的31次方，表示的最大数值约等于2*1000*1000*1000，也就是20亿的大小，所以，要实现一个一百亿的计算器，我们得自己设计一个类可以用于表示很大的整数，并且提供了与另外一个整数进行加减乘除的功能，大概功能如下：</span><br><span class="line">	（）这个类内部有两个成员变量，一个表示符号，另一个用字节数组表示数值的二进制数</span><br><span class="line">    （）有一个构造方法，把一个包含有多位数值的字符串转换到内部的符号和字节数组中</span><br><span class="line">    （）提供加减乘除的功能</span><br><span class="line">    public class BigInteger&#123;</span><br><span class="line">		int sign;</span><br><span class="line">		byte[] val;</span><br><span class="line">		public Biginteger(String val)	&#123;</span><br><span class="line">			sign = ;</span><br><span class="line">			val = ;</span><br><span class="line">		&#125;</span><br><span class="line">		public BigInteger add(BigInteger other)	&#123;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		public BigInteger subtract(BigInteger other)	&#123;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		public BigInteger multiply(BigInteger other)&#123;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		public BigInteger divide(BigInteger other)&#123;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>参看jdk中自带的java.math.BigInteger类的源码</li>
+<li>要想写出这个类的完整代码，面试的人也知道谁都不可能在短时间内写出这个类的完整代码的，他要的是你是否有这方面的概念和意识，他最重要的还是考查你的能力，所以，你不要因为自己无法写出完整的最终结果就放弃答这道题，你要做的就是你比别人写得多，证明你比别人强，你有这方面的思想意识就可以了，毕竟别人可能连题目的意思都看不懂，什么都没写，你要敢于答这道题，即使只答了一部分，那也与那些什么都不懂的人区别出来，拉开了距离，算是矮子中的高个，机会当然就属于你了。另外，答案中的框架代码也很重要，体现了一些面向对象设计的功底，特别是其中的方法命名很专业，用的英文单词很精准，这也是能力、经验、专业性、英语水平等多个方面的体现，会给人留下很好的印象，在编程能力和其他方面条件差不多的情况下，英语好除了可以使你获得更多机会外，薪水可以高出一千元。</li>
+</ul>
+<hr>
+
+      
+    </div>
+    
+    
+    
+	
+		<div>
+			
+		</div>
+	
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="codingLixh wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您添加我的个人微信</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="codingLixh 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="codingLixh 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java面试宝典/" rel="tag"><i class="fa fa-tag"></i> Java面试宝典</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/12/2018/随手记/Java基础知识盘点/" rel="next" title="int和integer的区别与用法">
+                <i class="fa fa-chevron-left"></i> int和integer的区别与用法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/../images/avatar.png"
+                alt="codingLixh" />
+            
+              <p class="site-author-name" itemprop="name">codingLixh</p>
+              <p class="site-description motion-element" itemprop="description">优秀的人，不是不合群，而是他们合群的人里面没有你</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/codingLeexh" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Java基础"><span class="nav-number">1.</span> <span class="nav-text">1.Java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-一个”-java”源文件中是否可以包括多个类（不是内部类）？有什么限制？"><span class="nav-number">1.1.</span> <span class="nav-text">1.一个”.java”源文件中是否可以包括多个类（不是内部类）？有什么限制？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Java有没有goto"><span class="nav-number">1.2.</span> <span class="nav-text">2.Java有没有goto?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-说说-amp-和-amp-amp-的区别"><span class="nav-number">1.3.</span> <span class="nav-text">3.说说&amp;和&amp;&amp;的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-在JAVA中如何跳出当前的多重嵌套循环？"><span class="nav-number">1.4.</span> <span class="nav-text">4.在JAVA中如何跳出当前的多重嵌套循环？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-switch语句能否作用在byte上，能否作用在long上，能否作用在String上"><span class="nav-number">1.5.</span> <span class="nav-text">5.switch语句能否作用在byte上，能否作用在long上，能否作用在String上?</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#6-short-s1-1-s1-s1-1-有什么错-short-s1-1-s1-1-有什么错"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">6.short s1 = 1; s1 = s1 + 1;有什么错? short s1 = 1; s1 += 1;有什么错?</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-char型变量中能不能存贮一个中文汉字-为什么"><span class="nav-number">1.6.</span> <span class="nav-text">7.char型变量中能不能存贮一个中文汉字?为什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-用最有效率的方法算出2乘以8等於几"><span class="nav-number">1.7.</span> <span class="nav-text">8.用最有效率的方法算出2乘以8等於几?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-请设计一个一百亿的计算器"><span class="nav-number">1.8.</span> <span class="nav-text">9.请设计一个一百亿的计算器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+		<div class="links-of-author motion-element">
+          
+	<!--以下是加入关于high一下的代码-->
+            <span ><a title="小high一下~" style="underline: none;color:red" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> &nbsp;&nbsp;High</a></span>
+	<!--以上是加入关于high一下的代码-->
+          
+		</div>
+		
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=-1 height=-1 src="//music.163.com/outchain/player?type=2&id=1383541&auto=1&height=32"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">codingLixh</span>
+
+  
+</div>
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="codingLixh.cn">没有梦想</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+-->
+
+  <div class="theme-info"> &mdash; <a class="theme-link" target="_blank" href="http://codingLixh.cn">没有梦想何必远方</a> <i class="fa fa-heart"></i></div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v="></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v="></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/js/src/post-details.js?v="></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
