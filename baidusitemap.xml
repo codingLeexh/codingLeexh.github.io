@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/02/27/2018/%E5%86%99%E7%BB%99%E6%88%91%E7%9A%84%E4%B8%80%E4%B8%AA%E6%9C%8B%E5%8F%8B/%E5%86%99%E7%BB%99%E6%88%91%E7%9A%84%E4%B8%80%E4%B8%AA%E6%9C%8B%E5%8F%8B/</loc>
+    <lastmod>2018-02-27T14:00:36.875Z</lastmod>
+    <data>
+        <display>
+        <title>写给我的一个朋友</title>
+        <pubTime>2018-02-27T13:24:41.978Z</pubTime>
+        
+        <tag>Myfriend</tag>
+         
+         
+           
+             
+              <breadCrumb title="时光" url="http://yoursite.com/categories/%E6%97%B6%E5%85%89/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/02/27/2018/Spring/Spring%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2018-02-27T13:48:58.650Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="框架" url="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/02/27/2018/%E5%86%99%E7%BB%99%E6%88%91%E7%9A%84%E4%B8%80%E4%B8%AA%E6%9C%8B%E5%8F%8B/%E5%86%99%E7%BB%99%E6%88%91%E7%9A%84%E4%B8%80%E4%B8%AA%E6%9C%8B%E5%8F%8B/</loc>
-    <lastmod>2018-02-27T13:46:10.219Z</lastmod>
-    <data>
-        <display>
-        <title>写给我的一个朋友</title>
-        <pubTime>2018-02-27T13:24:41.978Z</pubTime>
-        
-        <tag>Myfriend</tag>
-         
-         
-           
-             
-              <breadCrumb title="时光" url="http://yoursite.com/categories/%E6%97%B6%E5%85%89/"/>
           
         </display>
     </data>
