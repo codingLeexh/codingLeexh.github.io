@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Myfriend," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="大学两年多，自己没有好好努力所以没学到什么东西。书到用时方恨少，看到老友们纷纷转行，心中深觉可惜。于此，新的一年从零开始，觉醒自己的兽性，经过一个多月的努力，总结了以下学识，仅供给老友参考。也希望老友能尽快找回自己的路。当你看到这篇文章的时候，我可能已经在深圳忙碌的找工作了。   这篇文章可能没有什么技术性的东西，这只是总结适用我个人Java学习的一个路线，但如果你跟我之前一样找不到学习方向的">
+<meta name="keywords" content="Myfriend">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写给我的一个朋友">
+<meta property="og:url" content="http://yoursite.com/2018/02/27/2018/写给我的一个朋友/写给我的一个朋友/index.html">
+<meta property="og:site_name" content="codingLixh&#39;s blog">
+<meta property="og:description" content="大学两年多，自己没有好好努力所以没学到什么东西。书到用时方恨少，看到老友们纷纷转行，心中深觉可惜。于此，新的一年从零开始，觉醒自己的兽性，经过一个多月的努力，总结了以下学识，仅供给老友参考。也希望老友能尽快找回自己的路。当你看到这篇文章的时候，我可能已经在深圳忙碌的找工作了。   这篇文章可能没有什么技术性的东西，这只是总结适用我个人Java学习的一个路线，但如果你跟我之前一样找不到学习方向的">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://pic2.zhimg.com/80/229cf9ff5b1729eaf408fac56238eeb3_hd.jpg">
+<meta property="og:image" content="http://wiki.jikexueyuan.com/project/jdbc/images/r8GqQJ3.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/codingLeexh/MarkDownPhotos/master/img/jdbc1.png">
+<meta property="og:image" content="http://img.blog.csdn.net/20170323161442945?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFja19fRnJvc3Q=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170323161529749?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFja19fRnJvc3Q=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="https://raw.githubusercontent.com/codingLeexh/MarkDownPhotos/master/img/QQ%E5%9B%BE%E7%89%8720180227201200.png">
+<meta property="og:updated_time" content="2018-02-27T13:46:10.219Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="写给我的一个朋友">
+<meta name="twitter:description" content="大学两年多，自己没有好好努力所以没学到什么东西。书到用时方恨少，看到老友们纷纷转行，心中深觉可惜。于此，新的一年从零开始，觉醒自己的兽性，经过一个多月的努力，总结了以下学识，仅供给老友参考。也希望老友能尽快找回自己的路。当你看到这篇文章的时候，我可能已经在深圳忙碌的找工作了。   这篇文章可能没有什么技术性的东西，这只是总结适用我个人Java学习的一个路线，但如果你跟我之前一样找不到学习方向的">
+<meta name="twitter:image" content="https://pic2.zhimg.com/80/229cf9ff5b1729eaf408fac56238eeb3_hd.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+<script type="text/javascript" src="/js/src/high.js"></script>
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/27/2018/写给我的一个朋友/写给我的一个朋友/"/>
+
+
+
+
+
+  <title>写给我的一个朋友 | codingLixh's blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?35f2856f4da33fb5839e0de8a7057525";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">codingLixh's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">不忘初心，方得始终。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-high">
+          <a href="javascript:void(0)" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            high
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/27/2018/写给我的一个朋友/写给我的一个朋友/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="codingLixh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/../images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codingLixh's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">写给我的一个朋友</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-27T21:24:41+08:00">
+                2018-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/时光/" itemprop="url" rel="index">
+                    <span itemprop="name">时光</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="\assets\js\APlayer.min.js"> </script><blockquote>
+<p>大学两年多，自己没有好好努力所以没学到什么东西。书到用时方恨少，看到老友们纷纷转行，心中深觉可惜。<br>于此，新的一年从零开始，觉醒自己的兽性，经过一个多月的努力，总结了以下学识，仅供给老友参考。<br>也希望老友能尽快找回自己的路。当你看到这篇文章的时候，我可能已经在深圳忙碌的找工作了。</p>
+</blockquote>
+<hr>
+<p><code>这篇文章可能没有什么技术性的东西，这只是总结适用我个人Java学习的一个路线，但如果你跟我之前一样找不到学习方向的话，建议你不妨看看，亦可查缺补漏</code></p>
+<h2 id="Java前篇"><a href="#Java前篇" class="headerlink" title="Java前篇"></a>Java前篇</h2><blockquote>
+<p>Java的基础知识，由于网上很多相关教程，总结的都很不错，我在此也不做解释了，并且我也坚信老友的基础还是比我强的多。给出教程地址仅供参考：</p>
+</blockquote>
+<p><a href="http://www.runoob.com/java/java-encapsulation.html/" target="_blank" rel="noopener">JAVA基础-菜鸟教程</a></p>
+<p><code>在此，我主要讲诉JavaWeb开发学习路线</code>(此次总结是根据我个人学习所得，很多重要知识不全只能慢慢追赶)</p>
+<h2 id="JavaWeb学习路线-codinglixh’s-conclusion"><a href="#JavaWeb学习路线-codinglixh’s-conclusion" class="headerlink" title="JavaWeb学习路线(codinglixh’s conclusion)"></a>JavaWeb学习路线(codinglixh’s conclusion)</h2><p>需要掌握的：</p>
+<ul>
+<li>前端技术(不解释)</li>
+<li>简单理解http请求</li>
+<li>JSP</li>
+<li>servlet</li>
+<li>jdbc</li>
+<li>Spring</li>
+<li>SpringMVC</li>
+<li>Mybatis</li>
+<li>框架整合</li>
+<li>项目实践</li>
+<li>项目优化</li>
+<li>Redis</li>
+<li>Tomcat集群</li>
+</ul>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p><a href="https://www.jianshu.com/p/728fd5c2c894" target="_blank" rel="noopener">理解http协议</a></p>
+<h3 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h3><blockquote>
+<p><a href="http://www.runoob.com/jsp/jsp-tutorial.html/" target="_blank" rel="noopener">JSP的详解</a></p>
+</blockquote>
+<h3 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h3><blockquote>
+<p><a href="http://www.runoob.com/servlet/servlet-tutorial.html" target="_blank" rel="noopener">Servlet详解</a></p>
+</blockquote>
+<h4 id="JSP和Servlet区别"><a href="#JSP和Servlet区别" class="headerlink" title="JSP和Servlet区别"></a>JSP和Servlet区别</h4><blockquote>
+<p>想起我们Java老师经典的话，jsp就是在html里面写java代码，servlet就是在java里面写html代码。其实jsp经过容器解释之后就是servlet。只是我们自己写代码的时候尽量能让它们各司其职，jsp更注重前端显示，servlet更注重模型和业务逻辑。</p>
+</blockquote>
+<p>主要理解以下三点：</p>
+<ul>
+<li><p><strong>1.不同之处在哪？</strong></p>
+</li>
+<li><p>[x] Servlet在Java代码中通过HttpServletResponse对象动态输出HTML内容</p>
+</li>
+<li><p>[x] JSP在静态HTML内容中嵌入Java代码，Java代码被动态执行后生成HTML内容</p>
+</li>
+<li><p><strong>2.各自的特点</strong></p>
+</li>
+<li><p>[x] Servlet能够很好地组织业务逻辑代码，但是在Java源文件中通过字符串拼接的方式生成动态HTML内容会导致代码维护困难、可读性差</p>
+</li>
+<li><p>[x] JSP虽然规避了Servlet在生成HTML内容方面的劣势，但是在HTML中混入大量、复杂的业务逻辑同样也是不可取的</p>
+</li>
+<li><p><strong>通过MVC双剑合璧</strong></p>
+</li>
+</ul>
+<p><code>既然JSP和Servlet都有自身的适用环境，那么能否扬长避短，让它们发挥各自的优势呢？答案是肯定的——MVC(Model-View-Controller)模式非常适合解决这一问题。</code><br>(MVC模式利用springMVC时详细介绍)</p>
+<p><code>MVC模式（Model-View-Controller）</code>是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）：</p>
+<ul>
+<li><p>[x] Model——业务功能编写（例如算法实现）、数据库设计以及数据存取操作实现</p>
+</li>
+<li><p>[x] View——负责界面显示</p>
+</li>
+<li><p>[x] Controller——负责转发请求，对请求进行处理</p>
+</li>
+</ul>
+<p>在JSP/Servlet开发的软件系统中，这三个部分的描述如下所示：</p>
+<p><img src="https://pic2.zhimg.com/80/229cf9ff5b1729eaf408fac56238eeb3_hd.jpg" alt="image"></p>
+<ol>
+<li>Web浏览器发送HTTP请求到服务端，被Controller(Servlet)获取并进行处理（例如参数解析、请求转发）</li>
+<li>Controller(Servlet)调用核心业务逻辑——Model部分，获得结果</li>
+<li>Controller(Servlet)将逻辑处理结果交给View（JSP），动态输出HTML内容</li>
+<li>Controller(Servlet)将逻辑处理结果交给View（JSP），动态输出HTML内容</li>
+</ol>
+<p>MVC模式在Web开发中的好处是非常明显，它规避了JSP与Servlet各自的短板，Servlet只负责业务逻辑而不会通过out.append()动态生成HTML代码；JSP中也不会充斥着大量的业务代码。这大大提高了代码的可读性和可维护性。</p>
+<blockquote>
+<p>所以，在后续的项目开发中，jsp专注于页面设计，servlet专注于业务逻辑。值得注意的是JSP实质还是Servlet。</p>
+</blockquote>
+<p><code>在你没有弄懂servlet底层机制之前，还是不要去学习框架为好</code></p>
+<h4 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h4><blockquote>
+<p><a href="http://wiki.jikexueyuan.com/project/jdbc/introduction.html" target="_blank" rel="noopener">JDBC详解</a></p>
+</blockquote>
+<p>如果你忘了jdbc是什么，可以回去看看以前的web项目中，老师带我们写的DataUtil.java就明白了。</p>
+<p>这里简单介绍：</p>
+<ul>
+<li>JDBC 指 Java 数据库连接，是一种标准Java应用编程接口（ JAVA API），用来连接 Java 编程语言和广泛的数据库。</li>
+</ul>
+<p>以下是结构图，其中显示了驱动程序管理器相对于在 JDBC 驱动程序和 Java 应用程序所处的位置。</p>
+<p><img src="http://wiki.jikexueyuan.com/project/jdbc/images/r8GqQJ3.jpg" alt="image"></p>
+<p><strong>常见的JDBC组件</strong></p>
+<ul>
+<li>DriverManager：这个类管理一系列数据库驱动程序。匹配连接使用通信子协议从 JAVA 应用程序中请求合适的数据库驱动程序。识别 JDBC 下某个子协议的第一驱动程序将被用于建立数据库连接。</li>
+<li>Driver: 这个接口处理与数据库服务器的通信。你将很少直接与驱动程序互动。相反，你使用 DriverManager 中的对象，它管理此类型的对象。它也抽象与驱动程序对象工作相关的详细信息。</li>
+<li>Connection: 此接口具有接触数据库的所有方法。该连接对象表示通信上下文，即，所有与数据库的通信仅通过这个连接对象进行。</li>
+<li>Statement: 使用创建于这个接口的对象将 SQL 语句提交到数据库。除了执行存储过程以外，一些派生的接口也接受参数。</li>
+<li>ResultSet : 在你使用语句对象执行 SQL 查询后，这些对象保存从数据获得的数据。它作为一个迭代器，让您可以通过它的数据来移动。</li>
+<li>SQLException : 这个类处理发生在数据库应用程序的任何错误。</li>
+</ul>
+<p>基础的jdbc编程代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(driverClass)</span><br><span class="line">//加载MySql驱动</span><br><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</span><br><span class="line">//加载Oracle驱动</span><br><span class="line">Class.forName(&quot;oracle.jdbc.driver.OracleDriver&quot;)</span><br><span class="line">//获得数据库连接：</span><br><span class="line">DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/数据库名称&quot;, &quot;root&quot;, &quot;root&quot;);</span><br><span class="line">//创建Statement\PreparedStatement对象：</span><br><span class="line">conn.createStatement();</span><br><span class="line">conn.prepareStatement(sql);</span><br><span class="line"></span><br><span class="line">连接数据库实例：</span><br><span class="line">import java.sql.Connection;</span><br><span class="line">import java.sql.DriverManager;</span><br><span class="line">import java.sql.ResultSet;</span><br><span class="line">import java.sql.Statement;</span><br><span class="line"></span><br><span class="line">public class DbUtil &#123;</span><br><span class="line"></span><br><span class="line">    public static final String URL = &quot;jdbc:mysql://localhost:3306/数据库名称&quot;;</span><br><span class="line">    public static final String USER = &quot;root&quot;;</span><br><span class="line">    public static final String PASSWORD = &quot;root&quot;;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        //1.加载驱动程序</span><br><span class="line">        Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br><span class="line">        //2. 获得数据库连接</span><br><span class="line">        Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);</span><br><span class="line">        //3.操作数据库，实现增删改查</span><br><span class="line">        Statement stmt = conn.createStatement();</span><br><span class="line">        ResultSet rs = stmt.executeQuery(&quot;SELECT user_name, age FROM tb_goddess&quot;);</span><br><span class="line">        //如果有数据，rs.next()返回true</span><br><span class="line">        while(rs.next())&#123;</span><br><span class="line">            System.out.println(rs.getString(&quot;user_name&quot;)+&quot; 年龄：&quot;+rs.getInt(&quot;age&quot;));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">实现增删改查：</span><br><span class="line">package cn.codinglixh.db;</span><br><span class="line"></span><br><span class="line">import java.sql.Connection;</span><br><span class="line">import java.sql.DriverManager;</span><br><span class="line">import java.sql.ResultSet;</span><br><span class="line">import java.sql.Statement;</span><br><span class="line"></span><br><span class="line">public class DbUtil &#123;</span><br><span class="line">    public static final String URL = &quot;jdbc:mysql://localhost:3306/数据库名称&quot;;</span><br><span class="line">    public static final String USER = &quot;root&quot;;</span><br><span class="line">    public static final String PASSWORD = &quot;root&quot;;</span><br><span class="line">    private static Connection conn = null;</span><br><span class="line">    static&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            //1.加载驱动程序</span><br><span class="line">            Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br><span class="line">            //2. 获得数据库连接</span><br><span class="line">            conn = DriverManager.getConnection(URL, USER, PASSWORD);</span><br><span class="line">        &#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static Connection getConnection()&#123;</span><br><span class="line">        return conn;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//模型</span><br><span class="line">package cn.codinglixh.entity;</span><br><span class="line"></span><br><span class="line">import java.util.Date;</span><br><span class="line"></span><br><span class="line">public class Goddess &#123;</span><br><span class="line"></span><br><span class="line">    private Integer id;</span><br><span class="line">    private String user_name;</span><br><span class="line">    private Integer sex;</span><br><span class="line">    private Integer age;</span><br><span class="line">    private Date birthday; //注意用的是java.util.Date</span><br><span class="line">    private String email;</span><br><span class="line">    private String mobile;</span><br><span class="line">    private String create_user;</span><br><span class="line">    private String update_user;</span><br><span class="line">    private Date create_date;</span><br><span class="line">    private Date update_date;</span><br><span class="line">    private Integer isDel;</span><br><span class="line">    //getter setter方法。。。</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//---------dao层--------------</span><br><span class="line">package cn.codinglixh.dao;</span><br><span class="line"></span><br><span class="line">import cn.codinglixh.db.DbUtil;</span><br><span class="line">import cn.codinglixh.entity.Goddess;</span><br><span class="line"></span><br><span class="line">import java.sql.Connection;</span><br><span class="line">import java.sql.ResultSet;</span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.sql.Statement;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public class GoddessDao &#123;</span><br><span class="line">    //增加</span><br><span class="line">    public void addGoddess(Goddess g) throws SQLException &#123;</span><br><span class="line">        //获取连接</span><br><span class="line">        Connection conn = DbUtil.getConnection();</span><br><span class="line">        //sql</span><br><span class="line">        String sql = &quot;INSERT INTO tb_goddess(user_name, sex, age, birthday, email, mobile,&quot;+</span><br><span class="line">            &quot;create_user, create_date, update_user, update_date, isdel)&quot;</span><br><span class="line">                +&quot;values(&quot;+&quot;?,?,?,?,?,?,?,CURRENT_DATE(),?,CURRENT_DATE(),?)&quot;;</span><br><span class="line">        //预编译</span><br><span class="line">        PreparedStatement ptmt = conn.prepareStatement(sql); //预编译SQL，减少sql执行</span><br><span class="line"></span><br><span class="line">        //传参</span><br><span class="line">        ptmt.setString(1, g.getUser_name());</span><br><span class="line">        ptmt.setInt(2, g.getSex());</span><br><span class="line">        ptmt.setInt(3, g.getAge());</span><br><span class="line">        ptmt.setDate(4, new Date(g.getBirthday().getTime()));</span><br><span class="line">        ptmt.setString(5, g.getEmail());</span><br><span class="line">        ptmt.setString(6, g.getMobile());</span><br><span class="line">        ptmt.setString(7, g.getCreate_user());</span><br><span class="line">        ptmt.setString(8, g.getUpdate_user());</span><br><span class="line">        ptmt.setInt(9, g.getIsDel());</span><br><span class="line"></span><br><span class="line">        //执行</span><br><span class="line">        ptmt.execute();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void updateGoddess()&#123;</span><br><span class="line">        //获取连接</span><br><span class="line">        Connection conn = DbUtil.getConnection();</span><br><span class="line">        //sql, 每行加空格</span><br><span class="line">        String sql = &quot;UPDATE tb_goddess&quot; +</span><br><span class="line">                &quot; set user_name=?, sex=?, age=?, birthday=?, email=?, mobile=?,&quot;+</span><br><span class="line">                &quot; update_user=?, update_date=CURRENT_DATE(), isdel=? &quot;+</span><br><span class="line">                &quot; where id=?&quot;;</span><br><span class="line">        //预编译</span><br><span class="line">        PreparedStatement ptmt = conn.prepareStatement(sql); //预编译SQL，减少sql执行</span><br><span class="line"></span><br><span class="line">        //传参</span><br><span class="line">        ptmt.setString(1, g.getUser_name());</span><br><span class="line">        ptmt.setInt(2, g.getSex());</span><br><span class="line">        ptmt.setInt(3, g.getAge());</span><br><span class="line">        ptmt.setDate(4, new Date(g.getBirthday().getTime()));</span><br><span class="line">        ptmt.setString(5, g.getEmail());</span><br><span class="line">        ptmt.setString(6, g.getMobile());</span><br><span class="line">        ptmt.setString(7, g.getUpdate_user());</span><br><span class="line">        ptmt.setInt(8, g.getIsDel());</span><br><span class="line">        ptmt.setInt(9, g.getId());</span><br><span class="line"></span><br><span class="line">        //执行</span><br><span class="line">        ptmt.execute();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void delGoddess()&#123;</span><br><span class="line">        //获取连接</span><br><span class="line">        Connection conn = DbUtil.getConnection();</span><br><span class="line">        //sql, 每行加空格</span><br><span class="line">        String sql = &quot;delete from tb_goddess where id=?&quot;;</span><br><span class="line">        //预编译SQL，减少sql执行</span><br><span class="line">        PreparedStatement ptmt = conn.prepareStatement(sql);</span><br><span class="line"></span><br><span class="line">        //传参</span><br><span class="line">        ptmt.setInt(1, id);</span><br><span class="line"></span><br><span class="line">        //执行</span><br><span class="line">        ptmt.execute();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public List&lt;Goddess&gt; query() throws SQLException &#123;</span><br><span class="line">        Connection conn = DbUtil.getConnection();</span><br><span class="line">        Statement stmt = conn.createStatement();</span><br><span class="line">        ResultSet rs = stmt.executeQuery(&quot;SELECT user_name, age FROM tb_goddess&quot;);</span><br><span class="line"></span><br><span class="line">        List&lt;Goddess&gt; gs = new ArrayList&lt;Goddess&gt;();</span><br><span class="line">        Goddess g = null;</span><br><span class="line">        while(rs.next())&#123;</span><br><span class="line">            g = new Goddess();</span><br><span class="line">            g.setUser_name(rs.getString(&quot;user_name&quot;));</span><br><span class="line">            g.setAge(rs.getInt(&quot;age&quot;));</span><br><span class="line"></span><br><span class="line">            gs.add(g);</span><br><span class="line">        &#125;</span><br><span class="line">        return gs;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Goddess get()&#123;</span><br><span class="line">        Goddess g = null;</span><br><span class="line">        //获取连接</span><br><span class="line">        Connection conn = DbUtil.getConnection();</span><br><span class="line">        //sql, 每行加空格</span><br><span class="line">        String sql = &quot;select * from  tb_goddess where id=?&quot;;</span><br><span class="line">        //预编译SQL，减少sql执行</span><br><span class="line">        PreparedStatement ptmt = conn.prepareStatement(sql);</span><br><span class="line">        //传参</span><br><span class="line">        ptmt.setInt(1, id);</span><br><span class="line">        //执行</span><br><span class="line">        ResultSet rs = ptmt.executeQuery();</span><br><span class="line">        while(rs.next())&#123;</span><br><span class="line">            g = new Goddess();</span><br><span class="line">            g.setId(rs.getInt(&quot;id&quot;));</span><br><span class="line">            g.setUser_name(rs.getString(&quot;user_name&quot;));</span><br><span class="line">            g.setAge(rs.getInt(&quot;age&quot;));</span><br><span class="line">            g.setSex(rs.getInt(&quot;sex&quot;));</span><br><span class="line">            g.setBirthday(rs.getDate(&quot;birthday&quot;));</span><br><span class="line">            g.setEmail(rs.getString(&quot;email&quot;));</span><br><span class="line">            g.setMobile(rs.getString(&quot;mobile&quot;));</span><br><span class="line">            g.setCreate_date(rs.getDate(&quot;create_date&quot;));</span><br><span class="line">            g.setCreate_user(rs.getString(&quot;create_user&quot;));</span><br><span class="line">            g.setUpdate_date(rs.getDate(&quot;update_date&quot;));</span><br><span class="line">            g.setUpdate_user(rs.getString(&quot;update_user&quot;));</span><br><span class="line">            g.setIsDel(rs.getInt(&quot;isdel&quot;));</span><br><span class="line">        &#125;</span><br><span class="line">        return g;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="到此，一个Web项目所需要的基础技术你已经掌握了。这时候你需要写一个项目来深入理解。"><a href="#到此，一个Web项目所需要的基础技术你已经掌握了。这时候你需要写一个项目来深入理解。" class="headerlink" title="到此，一个Web项目所需要的基础技术你已经掌握了。这时候你需要写一个项目来深入理解。"></a>到此，一个Web项目所需要的基础技术你已经掌握了。这时候你需要写一个项目来深入理解。</h3><blockquote>
+<p>可以参考我写的一个客户管理系统 <a href="https://github.com/codingLeexh/CustomerManagement" target="_blank" rel="noopener">源码</a>。你也可以自行百度一个更好的项目锻炼自己。</p>
+</blockquote>
+<p>你可以参考上面jdbc代码做一个项目，这里用另一个简单的项目介绍：</p>
+<p>项目环境：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">jdk1.8</span><br><span class="line"></span><br><span class="line">Tomcat8.5</span><br><span class="line"></span><br><span class="line">IDEA2017</span><br><span class="line"></span><br><span class="line">MySql</span><br></pre></td></tr></table></figure>
+<p>项目功能：</p>
+<p><code>用户登录</code>(使用JSP+Servlet+jdbc,只做了登陆验证所有没有用JavaBean)</p>
+<ol>
+<li>创建数据库，创建表<ul>
+<li>sql代码：</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> Navicat Premium Data Transfer</span><br><span class="line"></span><br><span class="line"> Source Server         : 192.168.1.104</span><br><span class="line"> Source Server Type    : MySQL</span><br><span class="line"> Source Server Version : 50720</span><br><span class="line"> Source Host           : localhost:3306</span><br><span class="line"> Source Schema         : jdbc</span><br><span class="line"></span><br><span class="line"> Target Server Type    : MySQL</span><br><span class="line"> Target Server Version : 50720</span><br><span class="line"> File Encoding         : 65001</span><br><span class="line"></span><br><span class="line"> Date: 27/02/2018 17:35:44</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">SET NAMES utf8mb4;</span><br><span class="line">SET FOREIGN_KEY_CHECKS = 0;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Table structure for tb_user</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `tb_user`;</span><br><span class="line">CREATE TABLE `tb_user`  (</span><br><span class="line">  `id` int(11) NOT NULL COMMENT &apos;用户id&apos;,</span><br><span class="line">  `username` varchar(12) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT &apos;登录名&apos;,</span><br><span class="line">  `password` varchar(16) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT &apos;密码&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Records of tb_user</span><br><span class="line">-- ----------------------------</span><br><span class="line">INSERT INTO `tb_user` VALUES (1, &apos;admin&apos;, &apos;admin&apos;);</span><br><span class="line"></span><br><span class="line">SET FOREIGN_KEY_CHECKS = 1;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>IDEA中新建Web工程(暂时不介绍maven)</li>
+</ol>
+<p>大致结构</p>
+<p><img src="https://raw.githubusercontent.com/codingLeexh/MarkDownPhotos/master/img/jdbc1.png" alt="image"></p>
+<ol>
+<li>创建DataUtil.java</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">package cn.codinglixh.util;</span><br><span class="line"></span><br><span class="line">import java.sql.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Lixinhua</span><br><span class="line"> * @email codingLixh@163.com</span><br><span class="line"> * @date 2018/2/27 17:55</span><br><span class="line"> */</span><br><span class="line">public class DataUtil &#123;</span><br><span class="line"></span><br><span class="line">    public static final String URL = &quot;jdbc:mysql://localhost:3306/jdbc&quot;;</span><br><span class="line">    public static final String USER = &quot;root&quot;;</span><br><span class="line">    public static final String PASSWORD = &quot;1234&quot;;</span><br><span class="line">    private static Connection conn = null;</span><br><span class="line">    public static Statement st = null;//定义statement</span><br><span class="line">    public ResultSet result = null;//定义结果集</span><br><span class="line"></span><br><span class="line">    static&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            //1.加载驱动程序</span><br><span class="line">            Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br><span class="line">            //2. 获得数据库连接</span><br><span class="line">            conn = DriverManager.getConnection(URL, USER, PASSWORD);</span><br><span class="line">        &#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static Connection getConnection()&#123;</span><br><span class="line">        return conn;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //关闭数据库连接</span><br><span class="line">    public void close()&#123;</span><br><span class="line">        try&#123;</span><br><span class="line">            if (result != null)result.close();</span><br><span class="line">            if (st != null)st.close();</span><br><span class="line">            if (conn != null)conn.close();</span><br><span class="line">        &#125;catch(Exception ex)&#123;</span><br><span class="line">            ex.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>创建UserDao.java</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">package cn.codinglixh.dao;</span><br><span class="line"></span><br><span class="line">import cn.codinglixh.util.DataUtil;</span><br><span class="line"></span><br><span class="line">import java.sql.Connection;</span><br><span class="line">import java.sql.ResultSet;</span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.sql.Statement;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Lixinhua</span><br><span class="line"> * @email codingLixh@163.com</span><br><span class="line"> * @date 2018/2/27 17:59</span><br><span class="line"> */</span><br><span class="line">public class UserDao &#123;</span><br><span class="line"></span><br><span class="line">    //验证登陆的用户数据</span><br><span class="line">    public ResultSet query(String sql) throws SQLException &#123;</span><br><span class="line">        Connection conn= DataUtil.getConnection();</span><br><span class="line">        Statement stmt = conn.createStatement();</span><br><span class="line">        ResultSet rs =stmt.executeQuery(sql);</span><br><span class="line">        return rs;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>创建UserServlet</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">package cn.codinglixh.service;</span><br><span class="line"></span><br><span class="line">import cn.codinglixh.dao.UserDao;</span><br><span class="line"></span><br><span class="line">import javax.servlet.ServletException;</span><br><span class="line">import javax.servlet.http.HttpServlet;</span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import javax.servlet.http.HttpServletResponse;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.sql.ResultSet;</span><br><span class="line">import java.sql.SQLException;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Lixinhua</span><br><span class="line"> * @email codingLixh@163.com</span><br><span class="line"> * @date 2018/2/27 18:28</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">public class UserServlet extends HttpServlet &#123;</span><br><span class="line">    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;</span><br><span class="line">        //验证登录</span><br><span class="line">        UserDao userDao=new UserDao();</span><br><span class="line">        //获取从前端输入的用户名和密码</span><br><span class="line">        String username= new String(request.getParameter(&quot;username&quot;).getBytes(&quot;iso-8859-1&quot;),&quot;utf-8&quot;);</span><br><span class="line">        String password= new String(request.getParameter(&quot;password&quot;).getBytes(&quot;iso-8859-1&quot;),&quot;utf-8&quot;);</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            String sql = &quot;select * from tb_user where username=&apos;&quot;+username+&quot;&apos; and password=&apos;&quot;+password+&quot;&apos;&quot;;//创建sql</span><br><span class="line">            ResultSet rs = userDao.query(sql);</span><br><span class="line">            if(rs.next())&#123;</span><br><span class="line">                response.sendRedirect(&quot;/success.jsp&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                response.sendRedirect(&quot;/error.jsp&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>配置web.xml</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;</span><br><span class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;</span><br><span class="line">         version=&quot;3.1&quot;&gt;</span><br><span class="line">    &lt;servlet&gt;</span><br><span class="line">        &lt;servlet-name&gt;LoginServlet&lt;/servlet-name&gt;</span><br><span class="line">        &lt;servlet-class&gt;cn.codinglixh.service.UserServlet&lt;/servlet-class&gt;</span><br><span class="line">    &lt;/servlet&gt;</span><br><span class="line"></span><br><span class="line">    &lt;servlet-mapping&gt;</span><br><span class="line">        &lt;servlet-name&gt;LoginServlet&lt;/servlet-name&gt;</span><br><span class="line">        &lt;url-pattern&gt;/LoginServlet&lt;/url-pattern&gt;</span><br><span class="line">    &lt;/servlet-mapping&gt;</span><br><span class="line">    &lt;welcome-file-list&gt;</span><br><span class="line">        &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;</span><br><span class="line">    &lt;/welcome-file-list&gt;</span><br><span class="line">&lt;/web-app&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>创建前端页面：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line">1.index.jsp:</span><br><span class="line"></span><br><span class="line">&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: self-consciousness</span><br><span class="line">  Date: 2018/2/27</span><br><span class="line">  Time: 17:39</span><br><span class="line">  To change this template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;用户登录&lt;/title&gt;</span><br><span class="line">    &lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">        table &#123;</span><br><span class="line">            margin-top: 360px;</span><br><span class="line">        &#125;</span><br><span class="line">        body &#123;</span><br><span class="line">            color: #000;</span><br><span class="line">            font-size: 12px;</span><br><span class="line">            margin: 0px auto;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">        function check(form) &#123;</span><br><span class="line">            //document.forms.form1.username.value取得form1中Username的值 并判断是否为空</span><br><span class="line">            if (document.forms.form1.username.value == &quot;&quot;) &#123;</span><br><span class="line">                //如果 为&quot;&quot;则弹出提示</span><br><span class="line">                alert(&quot;pls input username&quot;);</span><br><span class="line">                //将输入焦点定位到没有输入的地方</span><br><span class="line">                document.forms.form1.username.focus();</span><br><span class="line">                //返回错误</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">            if (document.forms.form1.password.value == &quot;&quot;) &#123;</span><br><span class="line">                alert(&quot;pls input password&quot;);</span><br><span class="line">                document.forms.form1.password.focus();</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form action=&quot;LoginServlet&quot; method=&quot;post&quot; name=&quot;form1&quot;&gt;</span><br><span class="line">    &lt;table border=&quot;1&quot; cellspacing=&quot;1&quot; cellpadding=&quot;1&quot; bordercolor=&quot;silver&quot; align=&quot;center&quot;&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td colspan=&quot;2&quot; align=&quot;center&quot; bgcolor=&quot;#e8e8e8&quot;&gt;用户登陆&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;用户名：&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;/&gt;&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;密码：&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot;/&gt;&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;&lt;/td&gt;</span><br><span class="line">            &lt;!-- onclick=&quot;return check(this) 调用上面的Script进行验证 --&gt;</span><br><span class="line">            &lt;td&gt;&lt;input type=&quot;submit&quot; name=&quot;submit&quot; onclick=&quot;return check(this);&quot;/&gt;&lt;input type=&quot;reset&quot; name=&quot;重置&quot;/&gt;</span><br><span class="line">            &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2.success.jsp:</span><br><span class="line"></span><br><span class="line">&lt;%@ page import=&quot;java.util.Date&quot; %&gt;&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: self-consciousness</span><br><span class="line">  Date: 2018/2/27</span><br><span class="line">  Time: 18:26</span><br><span class="line">  To change this template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    登陆成功！</span><br><span class="line">    &lt;%</span><br><span class="line">        Date today = new Date();</span><br><span class="line">        int d = today.getDay();</span><br><span class="line">        int h = today.getHours();</span><br><span class="line">        String s = &quot;&quot;;</span><br><span class="line">        if(h&gt;0 &amp;&amp; h &lt; 12)</span><br><span class="line">            s = &quot;上午好&quot;;</span><br><span class="line">        else if(h&gt;=12)</span><br><span class="line">            s = &quot;下午好&quot;;</span><br><span class="line">        String day[] = &#123;&quot;日&quot;,&quot;一&quot;,&quot;二&quot;,&quot;三&quot;,&quot;四&quot;,&quot;五&quot;,&quot;六&quot;&#125;;</span><br><span class="line">        out.println(s+ &quot;，今天是星期&quot; + day[d]);</span><br><span class="line">    %&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.error.jsp</span><br><span class="line"></span><br><span class="line">&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: self-consciousness</span><br><span class="line">  Date: 2018/2/27</span><br><span class="line">  Time: 18:24</span><br><span class="line">  To change this template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;错误！&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">error&lt;a href=&quot;index.jsp&quot;&gt;点击这里返回&lt;/a&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>到此一个超级简单的登陆功能就结束了，另外记得导入mysql驱动包。<a href="http://blog.csdn.net/jack__frost/article/details/65449643" target="_blank" rel="noopener">Servlet原理解析</a></p>
+</blockquote>
+<p>附上图析：</p>
+<p><img src="http://img.blog.csdn.net/20170323161442945?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFja19fRnJvc3Q=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image"><br><img src="http://img.blog.csdn.net/20170323161529749?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFja19fRnJvc3Q=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image"></p>
+<p><code>深入的理解应该做更多的操作，所有老友赶紧coding</code></p>
+<h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><blockquote>
+<p>当你做了几个普通的Servlet项目后，你会发现项目的业务逻辑相当复杂，代码重用，高度耦合。这时候就用框架来简化开发。</p>
+</blockquote>
+<ul>
+<li><a href="http://note.youdao.com/noteshare?id=e415bd9759df6d41a260fe25473ad3f3&amp;sub=E660AF5CF2324FA18D2961202C3F4D60" target="_blank" rel="noopener">Spring入门介绍</a></li>
+</ul>
+<p>看完介绍后基于一个简单的项目来了解Spring：</p>
+<ol>
+<li>创建一个项目</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/codingLeexh/MarkDownPhotos/master/img/QQ%E5%9B%BE%E7%89%8720180227201200.png" alt="image"></p>
+<ol>
+<li>导入jar(由于项目由maven管理所以先提供pom.xml配置，如果你是普通web项目，也可以通过名字下载对应jar)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--  Spring   --&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;spring-core&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;4.3.12.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;4.3.12.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;4.3.12.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;4.3.12.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;junit-jupiter-api&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>创建一个dao，service层接口：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">package cn.codinglixh.spring.dao;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Lixinhua</span><br><span class="line"> * @email codingLixh@163.com</span><br><span class="line"> * @date 2018/2/27 14:44</span><br><span class="line"> */</span><br><span class="line">public interface IPersonDao &#123;</span><br><span class="line"></span><br><span class="line">    //假如做一个添加用户的功能</span><br><span class="line">    public void addPerson();</span><br><span class="line">&#125;</span><br><span class="line">-----------------------------------------</span><br><span class="line">package cn.codinglixh.spring.service;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Lixinhua</span><br><span class="line"> * @email codingLixh@163.com</span><br><span class="line"> * @date 2018/2/27 14:55</span><br><span class="line"> */</span><br><span class="line">public interface IPersonService &#123;</span><br><span class="line"></span><br><span class="line">    public void addPerson();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>接口实现：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">package cn.codinglixh.spring.dao.impl;</span><br><span class="line"></span><br><span class="line">import cn.codinglixh.spring.dao.IPersonDao;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Lixinhua</span><br><span class="line"> * @email codingLixh@163.com</span><br><span class="line"> * @date 2018/2/27 14:54</span><br><span class="line"> */</span><br><span class="line">public class PersonDaoImpl implements IPersonDao&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void addPerson() &#123;</span><br><span class="line">        System.out.println(&quot;addPerson()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-----------------------------------------</span><br><span class="line">package cn.codinglixh.spring.service.impl;</span><br><span class="line"></span><br><span class="line">import cn.codinglixh.spring.dao.IPersonDao;</span><br><span class="line">import cn.codinglixh.spring.service.IPersonService;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Lixinhua</span><br><span class="line"> * @email codingLixh@163.com</span><br><span class="line"> * @date 2018/2/27 14:56</span><br><span class="line"> */</span><br><span class="line">public class PersonService implements IPersonService&#123;</span><br><span class="line"></span><br><span class="line">    private IPersonDao personDao;</span><br><span class="line"></span><br><span class="line">    public void setPersonDao(IPersonDao personDao) &#123;</span><br><span class="line">        this.personDao = personDao;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void addPerson() &#123;</span><br><span class="line">        System.out.printf(&quot;........from service addPerson()&quot;);</span><br><span class="line">        personDao.addPerson();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>创建spring的核心配置文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</span><br><span class="line">       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;bean id=&quot;personDao&quot; class=&quot;cn.codinglixh.spring.dao.impl.PersonDaoImpl&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;bean id=&quot;personService&quot; class=&quot;cn.codinglixh.spring.service.impl.PersonService&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;personDao&quot; ref=&quot;personDao&quot;/&gt;</span><br><span class="line">    &lt;/bean&gt;</span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>创建测试类：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">package cn.codinglixh.spring.test;</span><br><span class="line"></span><br><span class="line">import cn.codinglixh.spring.service.IPersonService;</span><br><span class="line">import org.junit.Before;</span><br><span class="line">import org.junit.Test;</span><br><span class="line">import org.springframework.beans.factory.BeanFactory;</span><br><span class="line">import org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author Lixinhua</span><br><span class="line"> * @email codingLixh@163.com</span><br><span class="line"> * @date 2018/2/27 14:58</span><br><span class="line"> */</span><br><span class="line">public class PersonServiceTest &#123;</span><br><span class="line"></span><br><span class="line">    private BeanFactory beanFactory =null;</span><br><span class="line"></span><br><span class="line">    @Before</span><br><span class="line">    public void before()&#123;</span><br><span class="line">        beanFactory =new ClassPathXmlApplicationContext(&quot;spring-context.xml&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void test()&#123;</span><br><span class="line">        IPersonService personService=(IPersonService) beanFactory.getBean(&quot;personService&quot;);</span><br><span class="line">        personService.addPerson();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>运行测试类：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">结果：</span><br><span class="line"></span><br><span class="line">........from service addPerson()</span><br><span class="line"></span><br><span class="line">addPerson()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Spring的作用得慢慢参悟。重点理解IOC/AOP。</p>
+</blockquote>
+<h3 id="springMVC及Mybatis"><a href="#springMVC及Mybatis" class="headerlink" title="springMVC及Mybatis"></a>springMVC及Mybatis</h3><blockquote>
+<p>谈不上熟悉，只能简单的了解怎么使用。所有只好以项目代入。</p>
+</blockquote>
+<p><a href="https://codingLixh.cn/" target="_blank" rel="noopener">项目篇</a></p>
+
+      
+    </div>
+    
+    
+    
+	
+		<div>
+			
+		</div>
+	
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="codingLixh wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您添加我的个人微信</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="codingLixh 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="codingLixh 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Myfriend/" rel="tag"><i class="fa fa-tag"></i> Myfriend</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/27/2018/Spring/Spring入门/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/../images/avatar.png"
+                alt="codingLixh" />
+            
+              <p class="site-author-name" itemprop="name">codingLixh</p>
+              <p class="site-description motion-element" itemprop="description">优秀的人，不是不合群，而是他们合群的人里面没有你</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/codingLeexh" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java前篇"><span class="nav-number">1.</span> <span class="nav-text">Java前篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaWeb学习路线-codinglixh’s-conclusion"><span class="nav-number">2.</span> <span class="nav-text">JavaWeb学习路线(codinglixh’s conclusion)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP"><span class="nav-number">2.1.</span> <span class="nav-text">HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSP"><span class="nav-number">2.2.</span> <span class="nav-text">JSP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet"><span class="nav-number">2.3.</span> <span class="nav-text">Servlet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JSP和Servlet区别"><span class="nav-number">2.3.1.</span> <span class="nav-text">JSP和Servlet区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JDBC"><span class="nav-number">2.3.2.</span> <span class="nav-text">JDBC</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#到此，一个Web项目所需要的基础技术你已经掌握了。这时候你需要写一个项目来深入理解。"><span class="nav-number">2.4.</span> <span class="nav-text">到此，一个Web项目所需要的基础技术你已经掌握了。这时候你需要写一个项目来深入理解。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring"><span class="nav-number">2.5.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#springMVC及Mybatis"><span class="nav-number">2.6.</span> <span class="nav-text">springMVC及Mybatis</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+		<div class="links-of-author motion-element">
+          
+	<!--以下是加入关于high一下的代码-->
+            <span ><a title="小high一下~" style="underline: none;color:red" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> &nbsp;&nbsp;High</a></span>
+	<!--以上是加入关于high一下的代码-->
+          
+		</div>
+		
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=-1 height=-1 src="//music.163.com/outchain/player?type=2&id=32743519&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">codingLixh</span>
+
+  
+</div>
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="codingLixh.cn">没有梦想</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+-->
+
+  <div class="theme-info"> &mdash; <a class="theme-link" target="_blank" href="http://codingLixh.cn">没有梦想何必远方</a> <i class="fa fa-heart"></i></div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v="></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v="></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/js/src/post-details.js?v="></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
